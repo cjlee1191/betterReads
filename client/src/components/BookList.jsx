@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  axios  from 'axios';
 import { Link } from 'react-router-dom';
+import '../stylesheets/BookList.css';
 
 class BookList extends Component {
   constructor() {
@@ -31,11 +32,11 @@ class BookList extends Component {
       <div>
         {this.state.books.map((book) => {
           return(
-            <div key={book.id}>
-              <h2><Link to={`/books/${book.id}`}>{book.title}</Link></h2>
-              {book.description}
-              <h3>{book.author}</h3>
-              <div>{book.img_url}</div>
+            <div key={book.id} className="book-container">
+              <h2 className="title"><Link to={`/books/${book.id}`}>{book.title}</Link></h2>
+              <h6 className="author">{book.author}</h6>
+              <img src={book.img_url} alt="book-cover" className="image"></img>
+              <p>{book.description}</p>
               <hr/>
             </div>
           )     

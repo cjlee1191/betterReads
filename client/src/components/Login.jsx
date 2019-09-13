@@ -12,7 +12,7 @@ class Login extends Component {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const request = {"auth": {"email": email, "password": password}};
-    post('/api/user_token', request)
+    post('http://localhost:3000/api/user_token', request)
       .then(response => {
         localStorage.setItem("jwt", response.data.jwt);
         this.props.history.push("/");

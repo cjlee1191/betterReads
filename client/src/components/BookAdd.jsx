@@ -50,7 +50,7 @@ class BookAdd extends Component {
           </div>
           <div className="form-group">
             <label>Description</label>
-            <input name="content" rows="5" value={this.state.Description} onChange={this.handleChange} className="form-control" />
+            <input type="text" name="content"value={this.state.Description} onChange={this.handleChange} className="form-control" />
           </div>
 
           <div className="btn-group">
