@@ -10,7 +10,7 @@ class BookAdd extends Component {
     this.handleCancel = this.handleCancel.bind(this);
   }
 
-  handleSubmit(event) {
+  handleSubmit(event) { 
     event.preventDefault();
     let token = "Bearer " + localStorage.getItem("jwt")
     axios({ method: 'post', url: 'http://localhost:3000/api/books', headers: {'Authorization': token }, data: this.state})
