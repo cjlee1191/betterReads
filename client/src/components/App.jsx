@@ -3,6 +3,7 @@ import '../stylesheets/App.css';
 import Home from './Home';
 import Login from './Login';
 import Logout from './Logout';
+import Signup from './Signup'
 import BookList from './BookList';
 import BookInfo from './BookInfo';
 import BookAdd from './BookAdd';
@@ -27,6 +28,7 @@ const Navigation = () => (
     <ul className="navbar-nav mr-auto">
       <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/">Home</NavLink></li>
       <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/books">Books</NavLink></li>
+      <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/signup">Signup</NavLink></li>
       {
         localStorage.getItem("jwt") ?
           <li className="nav-item"><NavLink exact className="nav-link" to="/logout">Log Out</NavLink></li>
@@ -41,6 +43,7 @@ const Main = () => (
     <Route exact path="/" component={Home} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/logout" component={Logout} />
+    <Route exact path="/signup" component={Signup} />
     <Route exact path="/books" component={BookList} />
     <Route exact path="/books/new" component={BookAdd} />
     <Route exact path="/books/:id" component={BookInfo} />

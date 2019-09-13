@@ -17,13 +17,6 @@ class BookList extends Component {
           console.log(response.data)
         this.setState({ books: response.data })
       })
-    // axios.get('http://localhost:3000/api/books', )
-    // .then((response) => {   
-    //         this.setState({
-    //     books: response.data,
-    //   })
-     
-    // })
       .catch(error => console.log('error', error));
   }
 

@@ -37,5 +37,5 @@ Book.create!([
   {title: "Never Cry Werewolf", author: "Heather Davis", img_url: "http://res.cloudinary.com/dve2z73dr/image/upload/v1506641259/never-cry-werewolf_xv6qcg.jpg", description: "Okay, so maybe Shelby has made a few mistakes with boys lately (how was she supposed to know Wes had \"borrowed\" that Porsche?). But her stepmother totally overreacts when she catches Shelby in a post-curfew kiss with a hot senior: Suddenly Shelby's summer plans are on the shelf, and she's being packed off to brat camp. It's good-bye, prom dress; hello, hiking boots. Things start looking up, though, when Shelby meets fellow camper (and son of a rock star) Austin Bridges III. But soon she realizes there's more to Austin than crush material—his family has a dark secret, and he wants Shelby's help guarding it. Shelby knows that she really shouldn't be getting tangled up with another bad boy . . . but who is she to turn her back on a guy in need, especially such a good-looking one? One thing's for sure: That pesky full moon is about to get her into trouble all over again."}
 ])
 
-User.create!(name: "Chris Lee", email: "chris@chris.com", password: "password", password_confirmation: "password", admin: true)
-User.create!(name: "han solo", email: "han@han.com", password: "password", password_confirmation: "password")
+User.create!(name: "Chris Lee", email: "chris@chris.com", password: "password", admin: true)
+User.create!(name: "han solo", email: "han@han.com", password: "password")
