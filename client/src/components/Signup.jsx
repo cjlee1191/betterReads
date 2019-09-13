@@ -16,7 +16,7 @@ const request = {"user": {"name": name, "email": email, "password": password}};
     post('http://localhost:3000/api/users', request)
       .then(response => {
         localStorage.setItem("jwt", response.data.jwt);
-        this.props.history.push("/");
+        this.props.history.push("/books");
         console.log(response)
       })
       .catch(error => console.log('error', error));

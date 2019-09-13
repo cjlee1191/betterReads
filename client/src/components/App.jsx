@@ -29,7 +29,7 @@ const Navigation = () => (
       <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/">Home</NavLink></li>
       <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/books/new">Add Book</NavLink></li>
       <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/books">Books</NavLink></li>
-      <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/signup">Signup</NavLink></li>
+   
 
       {
         localStorage.getItem("jwt") ?
@@ -37,6 +37,13 @@ const Navigation = () => (
         :
           <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/login">Log In</NavLink></li>
       }
+      {
+        localStorage.getItem("jwt") ?
+          null
+        :
+        <li className="nav-item"><NavLink exact className="nav-link" to="/signup">Signup</NavLink></li>
+      }
+      
     </ul>
   </nav>
 );

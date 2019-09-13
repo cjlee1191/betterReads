@@ -4,7 +4,7 @@ import axios from 'axios';
 class BookAdd extends Component {
   constructor() {
     super();
-    this.state = { title: '', author: '', img_url: '', Description: '' };
+    this.state = { title: '', author: '', img_url: '', description: '' };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
@@ -50,7 +50,7 @@ class BookAdd extends Component {
           </div>
           <div className="form-group">
             <label>Description</label>
-            <input type="text" name="content"value={this.state.Description} onChange={this.handleChange} className="form-control" />
+            <input type="text" name="description" value={this.state.description} onChange={this.handleChange} className="form-control" />
           </div>
 
           <div className="btn-group">
