@@ -1,7 +1,7 @@
 Rails.application.configure do
 
 
-config.allowed_cors_origins = '*'
+# config.allowed_cors_origins = '*'
 
   
   # Settings specified here will take precedence over those in config/application.rb.
