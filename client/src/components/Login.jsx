@@ -14,6 +14,7 @@ class Login extends Component {
     const request = {"auth": {"email": email, "password": password}};
     post('http://localhost:3000/api/user_token', request)
       .then(response => {
+        console.log(response.data)
         localStorage.setItem("jwt", response.data.jwt);
         this.props.history.push("/books");
       })

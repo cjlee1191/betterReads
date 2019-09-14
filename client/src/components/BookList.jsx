@@ -11,7 +11,6 @@ class BookList extends Component {
 
   componentDidMount() {
     let token = "Bearer " + localStorage.getItem("jwt");
-    console.log(token)
     axios({method: 'get', url: 'http://localhost:3000/api/books', headers: {'Authorization': token }})
       .then(response => {
           console.log(response.data)

@@ -14,6 +14,7 @@ class BookEdit extends React.Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({method: 'get', url: `http://localhost:3000/api/books/${this.props.match.params.id}`, headers: {'Authorization': token }})
       .then((response) => { 
+        console.log(response)
         this.setState(response.data)
         console.log(` this is the edit response ${response.data}`)
       })
