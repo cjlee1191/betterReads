@@ -35,5 +35,7 @@ module BetterReads
     config.api_only = true
   end
   #application.rb
+  #application.rb
+
 
 end
