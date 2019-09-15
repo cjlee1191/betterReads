@@ -13,7 +13,7 @@ class BookAdd extends Component {
   handleSubmit(event) { 
     event.preventDefault();
     let token = "Bearer " + localStorage.getItem("jwt")
-    axios({ method: 'post', url: ' https://better-reads1.herokuapp.com/api/books', headers: {'Authorization': token }, data: this.state})
+    axios({ method: 'post', url: 'https://better-reads1.herokuapp.com/api/books', headers: {'Authorization': token }, data: this.state})
       .then((response) => {
         this.props.history.push(`/books/${response.data.id}`);
         console.log(response)
