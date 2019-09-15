@@ -23,7 +23,7 @@ class BookInfo extends Component {
 
   handleDelete() {
     let token = "Bearer " + localStorage.getItem("jwt");
-    axios({ method: 'delete', url: `http://localhost:3000/api/books/${this.props.match.params.id}`, headers: {'Authorization': token}})
+    axios({ method: 'delete', url: `  https://better-reads1.herokuapp.com/api/books/${this.props.match.params.id}`, headers: {'Authorization': token}})
       .then(() => {
         this.props.history.push("/books")
       })

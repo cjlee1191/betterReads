@@ -13,7 +13,7 @@ class Signup extends Component {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 const request = {"user": {"name": name, "email": email, "password": password}};
-    post('http://localhost:3000/api/users', request)
+    post(' https://better-reads1.herokuapp.com/api/users', request)
       .then(response => {
         localStorage.setItem("jwt", response.data.jwt);
         this.props.history.push("/books");
