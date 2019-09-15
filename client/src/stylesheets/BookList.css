@@ -1,7 +1,27 @@
 .book-container {
-    background-color: lightgrey;
- 
-}
+    background-color: #f5f3d0;
+    color: #382110;
+    width: 40vw;
+    margin-top: 20px;
+    align-content: center;
+    border: 1px solid tan;
+   
+
+    }
 .image{
-    height: 50vh
+    float: left;
+    height: 35vh;
+    padding: 10px
+}
+
+.books{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.title:hover {
+    opacity: 0.4
 }

@@ -22,19 +22,18 @@ class BookList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="books">
         {this.state.books.map((book) => {
           return(
             <div key={book.id} className="book-container">
-              <h2 className="title"><Link to={`/books/${book.id}`}>{book.title}</Link></h2>
+              <h2 className="title"><Link to={`/books/${book.id}`}style={{color: '#382110',textDecoration: 'none'}}>{book.title}</Link></h2>
               <h6 className="author">{book.author}</h6>
               <img src={book.img_url} alt="book-cover" className="image"></img>
               <p>{book.description}</p>
-              <hr/>
             </div>
           )     
         })}
-        <Link to="/books/new" className="btn btn-outline-primary">Add New Book</Link>  
+         
       </div>
     )
   }

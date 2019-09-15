@@ -1,0 +1,16 @@
+.header {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    height: 75vh;
+    background-image: url("http://www.sclance.com/backgrounds/book-background-images/book-background-images_434499.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #382110;
+    padding: 5%;
+
+
+    
+    
+}
