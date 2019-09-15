@@ -11,7 +11,7 @@ class BookList extends Component {
 
   componentDidMount() {
     let token = "Bearer " + localStorage.getItem("jwt");
-    axios({method: 'get', url: 'https://git.heroku.com/better-reads1.git/api/books', headers: {'Authorization': token }})
+    axios({method: 'get', url: 'http://localhost:3000/api/books', headers: {'Authorization': token }})
       .then(response => {
           console.log(response.data)
           console.log(token)
