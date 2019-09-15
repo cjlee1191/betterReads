@@ -32,7 +32,7 @@ class BookList extends Component {
             </div>
           )     
         })}
-        <Link to="/books/new" className="btn btn-outline-primary">Add New Book</Link>  
+         
       </div>
     )
   }
