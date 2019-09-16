@@ -30,13 +30,14 @@ class BookInfo extends Component {
       .catch(error => console.log('error', error));
   }
 
+
   render() {
     return (
       <div>
         <h1>{this.state.book.title}</h1>
         <p>{this.state.book.description}</p>
         <h3>{this.state.book.author}</h3>
-        <div>{this.state.book.img_url}</div>
+        <img src={this.state.book.img_url} alt="book-cover"></img>
 
         <p>
           <Link to={`/books/${this.state.book.id}/edit`} className="btn btn-outline-dark">Edit</Link> 
