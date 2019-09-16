@@ -16,6 +16,7 @@ class BookInfo extends Component {
       this.addComment = this.addComment.bind(this);
       this.handleChange = this.handleChange.bind(this);
     };
+    
     async componentDidMount() {
     let token = "Bearer " + localStorage.getItem("jwt");
 
@@ -47,9 +48,13 @@ class BookInfo extends Component {
   }
 
  async addComment(event) { 
+   
     event.preventDefault();
-    // let token = "Bearer " + localStorage.getItem("jwt")
-    await axios({ method: 'post', url: 'http://localhost:3000/comments', data: this.state.data })
+   const user_name = this.state.user_name
+   const body = this.state.body
+   let book_id = this.props.match.params.id
+   let data = {user_name, body, book_id}
+    await axios({ method: 'post', url: 'http://localhost:3000/comments', data: data })
       .then((response) => {
         console.log(response)
         console.log(this.state.data)
@@ -60,6 +65,24 @@ class BookInfo extends Component {
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value });
+  }
+  renderComments() {
+    if(this.state.book.id == this.props.match.params.id) {
+      return <ul className="comments">
+          { 
+           this.state.comments.map(comment => (
+            <div>
+            <br/>
+            <p className="poster">{comment.user_name}</p>
+            <p className="comment">{comment.body}</p>
+            <hr/>
+            </div>
+            )
+        )
+          }
+        </ul>
+    }
+   
   }
 
   render() {
@@ -92,19 +115,9 @@ class BookInfo extends Component {
             <button type="submit" className="btn btn-dark">Submit</button>
           </div>
           </form>
-        <ul className="comments">
-          {
-            this.state.comments.map(comment => (
-            <div>
-            <br/>
-            <p className="poster">{comment.user_name}</p>
-            <p className="comment">{comment.body}</p>
-            <hr/>
-            </div>
-            )
-        )
-          }
-        </ul>
+
+          {this.renderComments()}
+  
 
       </div>
     )
