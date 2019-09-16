@@ -12,7 +12,7 @@ class BookEdit extends React.Component {
 
   componentDidMount() {
     let token = "Bearer " + localStorage.getItem("jwt");
-    axios({method: 'get', url: `http://localhost:3000/api/books/${this.props.match.params.id}`, headers: {'Authorization': token }})
+    axios({method: 'get', url: `https://better-reads1.herokuapp.com/api/books/${this.props.match.params.id}`, headers: {'Authorization': token }})
       .then((response) => { 
         console.log(response)
         this.setState(response.data)
@@ -24,7 +24,7 @@ class BookEdit extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let token = "Bearer " + localStorage.getItem("jwt")
-    axios({ method: 'patch', url: `http://localhost:3000/api/books/${this.state.id}`, headers: {'Authorization': token }, data: this.state})
+    axios({ method: 'patch', url: `https://better-reads1.herokuapp.com/api/books/${this.state.id}`, headers: {'Authorization': token }, data: this.state})
       .then(() => {
         this.props.history.push(`/books/${this.state.id}`);
       })

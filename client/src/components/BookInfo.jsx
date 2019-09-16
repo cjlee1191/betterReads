@@ -20,14 +20,14 @@ class BookInfo extends Component {
     async componentDidMount() {
     let token = "Bearer " + localStorage.getItem("jwt");
 
-    await axios({ method: 'get', url: `http://localhost:3000/api/books/${this.props.match.params.id}`, headers: { 'Authorization': token } })
+    await axios({ method: 'get', url: `https://better-reads1.herokuapp.com/api/books/${this.props.match.params.id}`, headers: { 'Authorization': token } })
 
       .then((response) => {
         this.setState({
           book: response.data
         })
       })
-   await axios({ method: 'get', url: `http://localhost:3000/comments` })
+   await axios({ method: 'get', url: `https://better-reads1.herokuapp.com/comments` })
       .then((response) => {
         this.setState({
           comments: response.data
@@ -54,7 +54,7 @@ class BookInfo extends Component {
    const body = this.state.body
    let book_id = this.props.match.params.id
    let data = {user_name, body, book_id}
-    await axios({ method: 'post', url: 'http://localhost:3000/comments', data: data })
+    await axios({ method: 'post', url: 'https://better-reads1.herokuapp.com/comments', data: data })
       .then((response) => {
         console.log(response)
         console.log(this.state.data)
