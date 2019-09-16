@@ -61,10 +61,10 @@ class BookEdit extends React.Component {
             <input name="content" value={this.state.Description} onChange={this.handleChange} className="form-control" />
           </div>
 
-          <div className="btn-group">
-            <button type="submit" className="btn btn-dark">Create</button>
-            <button type="button" onClick={this.handleCancel} className="btn btn-secondary">Cancel</button>
-          </div>
+            <div className="btn-group">
+              <button type="submit" className="btn btn-dark">Create</button>
+              <button type="button" onClick={this.handleCancel} className="btn btn-secondary">Cancel</button>
+            </div>
         </form>
       </div>
     );
