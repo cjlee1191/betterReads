@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../stylesheets/BookAdd.css'
 
 class BookAdd extends Component {
   constructor() {
@@ -33,7 +34,7 @@ class BookAdd extends Component {
 
   render() {
     return (
-      <div>
+      <div className="add-book">
         <h1>Create Book Post</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">

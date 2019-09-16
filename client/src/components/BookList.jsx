@@ -13,8 +13,6 @@ class BookList extends Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({method: 'get', url: 'http://localhost:3000/api/books', headers: {'Authorization': token }})
       .then(response => {
-          console.log(response.data)
-          console.log(token)
         this.setState({ books: response.data })
       })
       .catch(error => console.log('error', error));

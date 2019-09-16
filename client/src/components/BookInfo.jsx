@@ -82,13 +82,9 @@ class BookInfo extends Component {
           }
         </ul>
     }
-   
-  }
-
-  render() {
-
+    }
+render() {
     return (
-
       <div>
         <h1>{this.state.book.title}</h1>
         <p>{this.state.book.description}</p>

@@ -15,7 +15,6 @@ class Login extends Component {
     post('http://localhost:3000/api/user_token', request)
       .then(response => {
         localStorage.setItem("jwt", response.data.jwt);
-        console.log(response.data)
         this.props.history.push("/books");
       })
       .catch(error => console.log('error', error));

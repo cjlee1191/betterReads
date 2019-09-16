@@ -5,8 +5,6 @@
     margin-top: 20px;
     align-content: center;
     border: 1px solid tan;
-   
-
     }
 .image{
     float: left;
@@ -19,6 +17,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    background-color: #f7eed5;
+    color: #382110;
+    
     
 }
 
