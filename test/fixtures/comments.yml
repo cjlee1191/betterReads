@@ -2,10 +2,10 @@
 
 one:
   user_name: MyString
-  body: MyText
-  book_id: 1
+  body: MyString
+  book: one
 
 two:
   user_name: MyString
-  body: MyText
-  book_id: 1
+  body: MyString
+  book: two

@@ -39,3 +39,9 @@ Book.create!([
 
 User.create!(name: "Chris Lee", email: "chris@chris.com", password: "password", admin: true)
 User.create!(name: "han solo", email: "han@han.com", password: "password")
+
+Comment.create!(user_name: "Chris", body: "This was an amazing book", book_id: 1)
+Comment.create!(user_name: "Joe", body: "I really didnt like it", book_id: 2)
+Comment.create!(user_name: "Susan", body: "I think everyone should read this", book_id: 1)
+Comment.create!(user_name: "Kyle", body: "I loved it!", book_id: 3)
+

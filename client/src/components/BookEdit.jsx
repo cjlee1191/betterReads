@@ -12,11 +12,11 @@ class BookEdit extends React.Component {
 
   componentDidMount() {
     let token = "Bearer " + localStorage.getItem("jwt");
-    axios({method: 'get', url: `https://git.heroku.com/better-reads1.git/api/books${this.props.match.params.id}`, headers: {'Authorization': token }})
+    axios({method: 'get', url: `http://localhost:3000/api/books/${this.props.match.params.id}`, headers: {'Authorization': token }})
       .then((response) => { 
         console.log(response)
         this.setState(response.data)
-        console.log(` this is the edit response ${response.data}`)
+        console.log(this.state.id)
       })
       .catch(error => console.log('error', error));
   }
@@ -61,10 +61,10 @@ class BookEdit extends React.Component {
             <input name="content" value={this.state.Description} onChange={this.handleChange} className="form-control" />
           </div>
 
-          <div className="btn-group">
-            <button type="submit" className="btn btn-dark">Create</button>
-            <button type="button" onClick={this.handleCancel} className="btn btn-secondary">Cancel</button>
-          </div>
+            <div className="btn-group">
+              <button type="submit" className="btn btn-dark">Create</button>
+              <button type="button" onClick={this.handleCancel} className="btn btn-secondary">Cancel</button>
+            </div>
         </form>
       </div>
     );

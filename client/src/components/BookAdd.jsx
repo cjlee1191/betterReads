@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../stylesheets/BookAdd.css'
 
 class BookAdd extends Component {
   constructor() {
@@ -13,7 +14,7 @@ class BookAdd extends Component {
   handleSubmit(event) { 
     event.preventDefault();
     let token = "Bearer " + localStorage.getItem("jwt")
-    axios({ method: 'post', url: 'https://better-reads1.herokuapp.com/api/books', headers: {'Authorization': token }, data: this.state})
+    axios({ method: 'post', url: 'http://localhost:3000/api/books', headers: {'Authorization': token }, data: this.state})
       .then((response) => {
         this.props.history.push(`/books/${response.data.id}`);
         console.log(response)
@@ -33,7 +34,7 @@ class BookAdd extends Component {
 
   render() {
     return (
-      <div>
+      <div className="add-book">
         <h1>Create Book Post</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
