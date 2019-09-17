@@ -85,7 +85,7 @@ class BookInfo extends Component {
     }
 render() {
     return (
-      <div>
+      <div className="book-info">
         <h1>{this.state.book.title}</h1>
         <p>{this.state.book.description}</p>
         <h3>{this.state.book.author}</h3>
