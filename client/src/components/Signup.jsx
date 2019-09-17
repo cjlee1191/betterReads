@@ -25,7 +25,7 @@ const request = {"user": {"name": name, "email": email, "password": password}};
   render() {
     return (
       <div>
-        <h1>Log In</h1>
+        <h1>Sign Up</h1>
         <form onSubmit={this.handleSubmit}>
         <div className="form-group">
             <label htmlFor="name">Name: </label>
