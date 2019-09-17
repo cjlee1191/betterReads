@@ -15,6 +15,7 @@ class Login extends Component {
     post('https://better-reads1.herokuapp.com/api/user_token', request)
       .then(response => {
         localStorage.setItem("jwt", response.data.jwt);
+        console.log(response.data)
         this.props.history.push("/books");
       })
       .catch(error => console.log('error', error));
