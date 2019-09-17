@@ -1,6 +1,8 @@
 # betterReads
 ### Built using a rails API backend and a React frontend.
 
+![better-reads-Gif](https://media.giphy.com/media/dZKz461ouIR7ji0N6r/giphy.gif)
+
 ### betterReads is a online book club user can log in and post books to a central repository that all user have access to.
 ### Clicking the the books title allows you to make edits or delete books you posted. Other users can also leave comments. 
 
