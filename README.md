@@ -18,3 +18,9 @@
 ##### 7. cd into client folder and run yarn install
 ##### 8. run yarn start to launch react app 
 ##### 9. view app in the browser localhost:3000
+
+
+#### Whats next?
+##### -search feature
+##### -categories
+##### -recommendations
